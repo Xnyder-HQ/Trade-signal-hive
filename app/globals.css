@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  
+  /* Brand Colors */
+  --primary: #84f7f0; /* Amber-400 */
+  --primary-foreground: #0a0a0a;
+  
+  --secondary-foreground: #ffffff;
+  
+  /* UI Colors */
+  --muted: #27272a; /* Zinc-800 */
+  --muted-foreground: #a1a1a9; /* Zinc-400 */
+  --border: #27272a;
+  --card: #18181b; /* Zinc-900 */
+  --card-foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+    background: rgba(24, 24, 27, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer {
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 72%, rgba(239, 182, 34, 1) 100%);
+    color: var(--foreground);
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+.hero{
+  padding-top: 5%;
+  text-align: center;
+  justify-content: center;
+}
+.trade{
+  text-align: center;
+  justify-content: center;  
+   color: var(--primary);  
+}
+.investor h2{
+ font-size: 55px; 
+}
+.investor p{
+ font-size: 15px;
+ margin-top: 5px;
+ 
+}
+.join{
+  background-color: var(--primary);
+}
+.pricing{
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.journey{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.box1, .box2{
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px;
+}
+.pro{
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  align-items: center;
+}
+.commend{
+  background-color: transparent;
+  border-radius: 15px;
+  border: 2px solid white;
+  padding: 5px;
+}
+.plans{
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+  gap: 10px;
+  font-size: 40px;
+
+}
+.dollar{
+font-size: 40px;
+}
+.plans .time{
+   font-size: 10px;
+}
+.feature{
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.box1 ul li{
+  list-style: none;
+  margin-top: 5px; 
+}
+.started{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 20px;
+  justify-content: center;
+  padding: 5px;
+  width: 300px;
+}
+.secure{
+  background: var(--card);
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+.secured{
+  background: var(--card);
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+.secured h2{
+  font-size: 20px;
+  margin-top: 30px;
+  line-height: 30px;
+}
+.secured p{
+  margin-top: 10px;
+}
+.explore{
+  margin-top: 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+.bank{
+  background: var(--card);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+.draw {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: white;
+    max-width: 400px; 
+}
+
+.draw h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.draw ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.draw li {
+    width: 50%;
+    list-style: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.draw li:nth-child(odd) {
+    color: var(--muted-foreground);
+    text-align: left;
+}
+
+.draw li:nth-child(even) {
+    color: white;
+    text-align: right;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
