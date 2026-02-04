@@ -7,7 +7,7 @@ export default function Dashboard() {
     <div className="min-h-screen bg-[#050b0f] p-6 text-white">
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {/* Left big card */}
-        <div className="rounded-3xl bg-gradient-to-br from-cyan-600/30 to-black p-6 shadow-xl">
+        <div className="rounded-3xl bg-linear-to-br from-cyan-600/30 to-black p-6 shadow-xl">
           <div className="mb-6 flex items-center justify-between">
             <h1 className="text-3xl font-semibold">
               Top Stocks Driving<br />Smarter Trading Insights
@@ -42,7 +42,7 @@ export default function Dashboard() {
                 <div className="text-right">
                   <p>$132.843</p>
                   <p
-                    className={`text-sm ${{ true: "text-emerald-400", false: "text-red-400" }[stock.up]}`}
+                    className={`text-sm ${stock.up ? "text-emerald-400" : "text-red-400"}`}
                   >
                     {stock.up ? "▲" : "▼"} 8.78%
                   </p>
@@ -54,7 +54,7 @@ export default function Dashboard() {
 
         {/* Right cards */}
         <div className="grid grid-cols-1 gap-6">
-          <div className="rounded-3xl bg-gradient-to-br from-cyan-500/30 to-black p-6 shadow-xl">
+          <div className="rounded-3xl bg-linear-to-br from-cyan-500/30 to-black p-6 shadow-xl">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-2xl font-semibold">
                 Get intelligent trading<br />suggestions with AI insights
@@ -72,7 +72,7 @@ export default function Dashboard() {
             </button>
           </div>
 
-          <div className="rounded-3xl bg-gradient-to-br from-cyan-600/30 to-black p-6 shadow-xl">
+          <div className="rounded-3xl bg-linear-to-br from-cyan-600/30 to-black p-6 shadow-xl">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-2xl font-semibold">
                 Track Leading<br />Stocks and Market Indices
