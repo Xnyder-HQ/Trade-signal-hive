@@ -1,46 +1,109 @@
-import Link from "next/link";
-import {ArrowUpRight} from "lucide-react";
+"use client";
 
-export default function Smarter() {
-    return (
-        <section>
-            <div className="">
-                <h3 className="text-xs font-bold text-primary ml-50 mt-3 mb-3">TRADE SMARTER TODAY</h3>
-            </div>
-            <div className="flex justify-between">
-                <div>
-                   <h2 className="ml-50 text-4xl font-bold"> Essential Features <br />Built For Smarter Trading</h2>
-                </div>
-                <div>
-                    <p className="text-sm text-gray-500 mr-50">Discover essential features that simplify investing, <br /> deliver real-time insight and empower smarter, <br />confident trading decisions.</p>
-                </div>
-            </div>
-            <div className="tesla justify-between flex mt-10 mb-10 ">
-                <div className="top-stock ml-50 p-3">
-                 <div className="flex justify-between">
-                    <h2 className="">Top Stock Driving<br />Smarter To Trading Insights</h2>
-                    <ArrowUpRight className="bg-gray-400 rounded-full" size={30} />
-                 </div>
-                 <p className="text-sm text-gray-500">Track top stocks like Apple Tesla Amazon and NVIDIA for <br />smarter trading decisions.</p>    
-                 <Link href="/dashboard"><button className=""> Start Trading Now</button></Link>
-                </div>
-                <div className="">
-                   <div className="get-trade mr-50 mt-3 mb items-center w-1/2 p-3">
-                     <div className="flex justify-between">
-                        <h2>Get intelligent trading <br />suggestions with AI insights</h2>
-                        <ArrowUpRight className="bg-gray-400 rounded-full" />
-                     </div>
-                     <p>Get AI-powered trading suggestions to make smarter, faster and confidence investment decision daily</p>
-                     <Link href=" /dashbord"><button className="">Invest Today</button></Link>
-                   </div>
-                   <div className="">
-                     <h2>Track Leading Stock and Market Indices</h2>
-                     <p>Monitor Dow Jones, NASDAQ and top stocks like Apple in real-time to make smarter trading decisions</p>
-                     <Link href=" /dashboard"><button className="">View Stocks</button></Link>
+import { ArrowUpRight } from "lucide-react";
 
-                   </div>
+export default function Dashboard() {
+  return (
+    <div className="min-h-screen bg-[#050b0f] p-6 text-white">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        {/* Left big card */}
+        <div className="rounded-3xl bg-gradient-to-br from-cyan-600/30 to-black p-6 shadow-xl">
+          <div className="mb-6 flex items-center justify-between">
+            <h1 className="text-3xl font-semibold">
+              Top Stocks Driving<br />Smarter Trading Insights
+            </h1>
+            <button className="rounded-full bg-white/10 p-3">
+              <ArrowUpRight />
+            </button>
+          </div>
+          <p className="mb-6 text-white/70">
+            Track top stocks like Apple, Tesla, Amazon and NVIDIA for smarter
+            investing decisions
+          </p>
+          <button className="mb-8 rounded-full bg-white/10 px-5 py-2">
+            Start Trading Now
+          </button>
+
+          <div className="space-y-4">
+            {[
+              { name: "AAPL", company: "Apple Inc.", up: true },
+              { name: "TSLA", company: "Tesla, Inc.", up: false },
+              { name: "AMZN", company: "Amazon.com, Inc.", up: true },
+              { name: "NVDA", company: "NVIDIA Corporation", up: true },
+            ].map((stock) => (
+              <div
+                key={stock.name}
+                className="flex items-center justify-between rounded-2xl bg-white/5 p-4"
+              >
+                <div>
+                  <p className="font-semibold">{stock.name}</p>
+                  <p className="text-sm text-white/60">{stock.company}</p>
                 </div>
+                <div className="text-right">
+                  <p>$132.843</p>
+                  <p
+                    className={`text-sm ${{ true: "text-emerald-400", false: "text-red-400" }[stock.up]}`}
+                  >
+                    {stock.up ? "▲" : "▼"} 8.78%
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right cards */}
+        <div className="grid grid-cols-1 gap-6">
+          <div className="rounded-3xl bg-gradient-to-br from-cyan-500/30 to-black p-6 shadow-xl">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-2xl font-semibold">
+                Get intelligent trading<br />suggestions with AI insights
+              </h2>
+              <button className="rounded-full bg-white/10 p-3">
+                <ArrowUpRight />
+              </button>
             </div>
-        </section>
-    );
+            <p className="mb-4 text-white/70">
+              Get AI-powered trading suggestions to make smarter, faster and
+              confident investment decisions daily
+            </p>
+            <button className="rounded-full bg-white/10 px-5 py-2">
+              Invest Today
+            </button>
+          </div>
+
+          <div className="rounded-3xl bg-gradient-to-br from-cyan-600/30 to-black p-6 shadow-xl">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-2xl font-semibold">
+                Track Leading<br />Stocks and Market Indices
+              </h2>
+              <button className="rounded-full bg-white/10 p-3">
+                <ArrowUpRight />
+              </button>
+            </div>
+            <p className="mb-6 text-white/70">
+              Monitor Dow Jones, NASDAQ and top stocks like Apple in real-time
+              to make smarter trading decisions
+            </p>
+            <button className="mb-6 rounded-full bg-white/10 px-5 py-2">
+              View Stocks
+            </button>
+
+            <div className="grid grid-cols-3 gap-4">
+              {["Dow Jones", "NASDAQ", "AAPL"].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl bg-white/5 p-4 text-center"
+                >
+                  <p className="text-sm">{item}</p>
+                  <p className="mt-2 font-semibold">$132.843</p>
+                  <p className="text-sm text-emerald-400">▲ 8.78%</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
