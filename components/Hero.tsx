@@ -1,5 +1,7 @@
 import { ArrowLeft, ArrowRight, BarChart2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
 
 export default function Hero()  {
   return (
@@ -16,13 +18,14 @@ export default function Hero()  {
           </div>
           <div className="flex justify-center gap-4 mb-10 mt-10 text-center">
             <div>
-                <Link href="#downlaod-app " className="bg-primary text-black px-4 py-2 rounded-full">Downlaod the App</Link>
+                <Link href="#download-app" className="bg-primary text-black px-4 py-2 rounded-full">Download the App</Link>
             </div>
             <div>
-                <Link href="#downlaod-app " className="join bg-primary text-black px-4 py-2 rounded-full" >Join Now</Link>
+                <Link href="#download-app" className="join bg-primary text-black px-4 py-2 rounded-full" >Join Now</Link>
             </div>
           </div>
         </div>
+          <Image src="/hero.png" alt="Hero Image" width={1200} height={560} className="w-full h-auto object-contain" />
     </section>
   );
 } 

@@ -1,67 +1,43 @@
-import { Zap, Shield, Globe, Cpu, Smartphone, Bell } from "lucide-react";
-
-const features = [
-  {
-    name: 'Real-Time Execution',
-    description: 'Signals are delivered instantly via our app and Telegram. Never miss a market move.',
-    icon: Zap,
-  },
-  {
-    name: 'Bank-Grade Security',
-    description: 'Your data and API keys are encrypted with 256-bit AES protection. Trade with peace of mind.',
-    icon: Shield,
-  },
-  {
-    name: 'Global Markets',
-    description: 'Access opportunities across Crypto, Forex, Commodities, and Stocks from one single dashboard.',
-    icon: Globe,
-  },
-  {
-    name: 'AI Algorithms',
-    description: 'Our proprietary machine learning models analyze millions of data points to predict trends.',
-    icon: Cpu,
-  },
-  {
-    name: 'Mobile First',
-    description: 'Manage your portfolio and receive alerts on the go with our top-rated mobile application.',
-    icon: Smartphone,
-  },
-  {
-    name: 'Smart Alerts',
-    description: 'Customizable notifications ensure you act only on the signals that match your strategy.',
-    icon: Bell,
-  },
-];
+import Link from "next/link";
+import { Bookmark } from "lucide-react";
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-black relative">
-      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
-      
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary">Why Choose Hive?</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Everything you need to trade profitability
+    <section>
+      <div className="flex justify-between ">
+        <div className="ml-50 mt-50 w-1/2 p-3">
+          <h2 className="text-4x1 font-bold text-primary mt-3 mb-3">MARKET INSIGHTS</h2>
+          <h2 className="news-text text-4xl font-bold mb-3">Lastest Market News <br />and Trending To Updates</h2>
+          <p className="text-sm text-gray-500">stay informed withthe latest market developments, breaking business <br />
+          news, and trending financial stories to make smarter, timely trading <br /> 
+          and investment decisions.
           </p>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            We combine institutional-grade data with user-friendly tools to help you beat the market consistently.
-          </p>
+          <Link href="/dashboard" className="read-more bg-primary rounded-full mt-10 inline-block text-black"><button>Read More</button></Link>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {features.map((feature) => (
-              <div key={feature.name} className="flex flex-col relative pl-16 group">
-                <dt className="text-base font-semibold leading-7 text-white">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 border border-primary/20 group-hover:bg-primary group-hover:text-black transition-all">
-                    <feature.icon className="h-6 w-6 text-primary group-hover:text-black" aria-hidden="true" />
-                  </div>
-                  {feature.name}
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-muted-foreground">{feature.description}</dd>
-              </div>
-            ))}
-          </dl>
+        <div className="benz mr-50 mt-50 p-3 text-white items-center bg-white rounded-xl h-100">
+          <div className="bg-black mb-3 p-3 rounded-xl">
+            <div className="flex items-center">
+              <Bookmark className="pr-2"/>
+              <p>Snap Just Bought A Student Calendar App: How could Be Reinvent Snapchat</p>
+            </div>
+            <p className="text-sm text-gray-500 pt-3 pl-5">Benzing . 1d ago</p>
+          </div>
+          <div className="bg-black mb-3 p-3 rounded-xl">
+           <div className="flex items-center">
+             <Bookmark className="pr-2 "/>
+            <p>Deal Dispatch: Boston Red Sox Owner sets <br />
+            Sights On La Liga Club, At Home Files For <br />
+            Bankrupty</p>
+           </div>
+           <p className="text-sm text-gray-500 pt-3 pl-5">Benzing . 1d ago</p>
+          </div>
+          <div className="bg-black p-3 mb-3 rounded-xl">
+            <div className="flex items-center ">
+              <Bookmark className="pr-2 text-white" />
+            <p>BREAKINGVIEWS-LA Lakers deal etches 'Showtime' on trophy assets</p>
+            </div>
+            <p className="text-sm text-gray-500 pt-3 pl-5">Benzing . 1d ago</p>
+          </div>
         </div>
       </div>
     </section>

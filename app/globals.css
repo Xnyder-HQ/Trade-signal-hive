@@ -218,4 +218,53 @@ font-size: 40px;
     display: flex;
     justify-content: space-between;
 }
+.total{
+  margin-top: 10px;
+  font-size: 14px; 
+  border: 1px solid white;
+  padding-top: 10px;
+  border-radius: 20px;
+  padding: 10px;
+}
+.total li{
+  list-style: none;
+  padding: 5px;
+  font-size: 14px;
+}
+.advanced{
+  display: flexbox;
+}
 
+.top-stock{
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.get-trade{
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.news-text{
+   line-height: 50px;
+}
+.news-text h2{
+  font-size: 30px;
+}
+.read-more{
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 15px;
+} 
+.read-more:hover{
+  background-color: var(--primary);
+  color: black;
+}
+.tesla {
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.benz{
+  background: linear-gradient(180deg,rgba(54, 132, 167, 1) 32%, rgba(39, 93, 118, 1) 64%, rgba(8, 10, 11, 1) 96%);
+}

@@ -3,7 +3,7 @@ import icon from "lucide-react";
 export default function Plan() {
     return( 
         <div>
-            <div className=" flex justify-center items-center">
+            <div className=" flex justify-center mt-40 items-center">
                 <h2 className=" text-base font-semibold leading-7 text-primary">CHOOSE YOUR PLAN</h2>
             </div>
             <div className="justify-center items-center">
