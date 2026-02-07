@@ -2,7 +2,37 @@
 
 import { ArrowUpRight } from "lucide-react";
 
+
 export default function Dashboard() {
+    const testimonials = [
+    {
+      name: "Kathryn Murphy",
+      role: "Owner of Fidelity Investments",
+      text:
+        "From real-time stock updates to intuitive charts, this app gives me everything I need to confidently monitor and grow my investments every day.",
+      stars: 4,
+      image: "/avatar1.jpg",
+      highlight: false,
+    },
+    {
+      name: "Brooklyn Simmons",
+      role: "Owner of Robinhood",
+      text:
+        "This app completely transformed my trading experience! Real-time market updates, intelligent insights, and easy-to-use tools make investing simple, fast, and enjoyable every single day.",
+      stars: 5,
+      image: "/avatar2.jpg",
+      highlight: true,
+    },
+    {
+      name: "Cameron Williamson",
+      role: "Owner of Plantio",
+      text:
+        "This app completely transformed my trading experience! With real-time market updates, actionable insights, and intuitive tools, investing has never been easier or more confident.",
+      stars: 4,
+      image: "/avatar3.jpg",
+      highlight: false,
+    },
+  ];
   return (
     <div className="min-h-screen bg-[#050b0f] p-6 text-white">
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -104,6 +134,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
