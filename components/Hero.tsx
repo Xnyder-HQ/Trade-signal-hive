@@ -1,7 +1,18 @@
 import { ArrowLeft, ArrowRight, BarChart2 } from "lucide-react";
+import {Space_Grotesk, Inter} from "next/font/google"
 import Link from "next/link";
 import Image from "next/image";
 
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function Hero()  {
   return (
@@ -13,8 +24,8 @@ export default function Hero()  {
           </div>
           </div>
           <div className="investor mb-10 mt-10 text-center ">
-            <h2>Instant Market Updates for<br />Smarter Faster investing</h2>
-            <p>Stay in control of your finances with market updates powerful <br /> portfolio tools secure trading options - All in one</p>
+            <h2 className={spaceGrotesk.className}>Instant Market Updates for<br />Smarter Faster investing</h2>
+            <p className={inter.className}>Stay in control of your finances with market updates powerful <br /> portfolio tools secure trading options - All in one</p>
           </div>
           <div className="flex justify-center gap-4 mb-10 mt-10 text-center">
             <div>

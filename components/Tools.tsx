@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { spaceGrotesk,inter } from "../lib/fonts";
 
 export default function Tools() {
     return(
@@ -7,8 +8,8 @@ export default function Tools() {
                 <h2 className="text-xs font-bold text-primary ml-2">SMART TOOLS</h2>
             </div>
             <div className="mt-3 advanced text-center ">
-                <h2 className="text-4xl mb-4 font-bold">Explore Advanced <br /> Tools for Smarter Investing Trading Today</h2>
-                <p className="text-sm  text-gray-500 max-w-lg mx-auto text-center ">Use advanced trading tools to analyze markets, manage porfolios efficiently, and <br /> make smarter, confidence investment decision</p>  
+                <h2 className="text-4xl mb-4 font-bold {spaceGrotesk.className}">Explore Advanced <br /> Tools for Smarter Investing Trading Today</h2>
+                <p className="text-sm  text-gray-500 max-w-lg mx-auto text-center {inter.className}">Use advanced trading tools to analyze markets, manage porfolios efficiently, and <br /> make smarter, confidence investment decision</p>  
             </div>
             <div className="flex justify-center gap-5 ">
                 <div className="secured">

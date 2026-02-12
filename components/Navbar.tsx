@@ -15,15 +15,15 @@ export default function Navbar() {
         </Link>
         
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-          <Link href="#features" className="hover:text-white transition-colors">Services</Link>
-          <Link href="#signals" className="hover:text-white transition-colors">Features</Link>
-          <Link href="#pricing" className="hover:text-white transition-colors">Pricing</Link>
+          <Link href="#home" className="hover:text-white transition-colors">Home</Link>
+          <Link href="#company" className="hover:text-white transition-colors">The Company</Link>
+          <Link href="#copy-trading" className="hover:text-white transition-colors">Copy Trading</Link>
           <Link href="#faq" className="hover:text-white transition-colors">FAQ</Link>
-          <Link href="#testimonials" className="hover:text-white transition-colors">Testimonials</Link>
+          <Link href="#contact" className="hover:text-white transition-colors">Contact</Link>
         </div>
 
         <div className="gap-4">
-            <Link href="#download" className="flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90">Download App</Link>
+            <Link href="#download" className="flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90">Get Started</Link>
           <button className="md:hidden text-white">
             <Menu className="h-6 w-6" />
           </button>

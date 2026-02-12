@@ -1,5 +1,6 @@
 import { TrendingUp, BarChart3, PieChart, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { spaceGrotesk,inter } from "../lib/fonts";
 
 export default function RealTime() {
   return (
@@ -10,10 +11,10 @@ export default function RealTime() {
           <TrendingUp className="h-4 w-4 text-primary" />
           <span className="text-xs font-bold text-primary tracking-wide">REAL-TIME INSIGHTS</span>
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold text-white text-center max-w-2xl leading-tight">
+        <h2 className="{spaceGrotesk.className} text-3xl md:text-5xl font-bold text-white text-center max-w-2xl leading-tight ">
           Explore the Essential Core Features For Smarter Trading
         </h2>
-        <p className="text-muted-foreground max-w-xl text-center text-lg">
+        <p className="{inter.className} text-muted-foreground max-w-xl text-center text-lg">
           Unlock smarter investing with essential features that provide real-time insights, simplify trading decisions, and help you grow confidently.
         </p>
       </div>

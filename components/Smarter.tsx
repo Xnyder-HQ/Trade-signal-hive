@@ -2,7 +2,6 @@
 
 import { ArrowUpRight } from "lucide-react";
 
-
 export default function Dashboard() {
     const testimonials = [
     {

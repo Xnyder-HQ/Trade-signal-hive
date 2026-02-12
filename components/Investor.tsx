@@ -2,9 +2,9 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
+import { spaceGrotesk,inter } from "../lib/fonts";
 
 export default function Investor(){
     const testimonials = [
@@ -47,7 +47,7 @@ export default function Investor(){
   ];
     return(
         <div>
-            <h2 className="text-xs font-bold text-primary ml-50 mt-40">TRUSTED BY INVESTORS</h2>
+            <h2 className="{spaceGrotesk.className} text-xs font-bold text-primary ml-50 mt-40">TRUSTED BY INVESTORS</h2>
         <div className="flex justify-between items-center mt-10">
             <div className="ml-50 font-bold">
                 <h2 className="text-4xl">Here What our<br />Users Are Saying Today.</h2>
