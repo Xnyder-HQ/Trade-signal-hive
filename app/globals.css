@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
@@ -30,24 +33,40 @@
   --color-border: var(--border);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-p{
-  font-family: var(--font-body);
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
 }
 
+/* Headings → Space Grotesk */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-space);
+}
+/* Paragraphs & list items → Inter */
+p,
+li {
+  font-family: var(--font-inter);
+}
+p,
+li {
+  line-height: 1.6;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-body);
+  font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: clamp(14px, 2vw, 16px);
+    line-height: 1.6;
 }
 
 /* Glassmorphism Utilities */
@@ -60,10 +79,10 @@ body {
 footer {
   background: linear-gradient(213deg,rgba(130, 190, 215, 1) 0%, rgba(12, 33, 42, 1) 24%, rgba(24, 49, 59, 1) 78%, rgba(130, 190, 215, 1) 100%);
     color: var(--foreground);
-    font-family: var(--font-body);
+    font-family: var(--font-inter);
 }
 .hero{
-  padding-top: 5%;
+  padding-top: clamp(3rem, 5vw, 5rem);
   text-align: center;
   justify-content: center;
 }
@@ -73,12 +92,13 @@ footer {
    color: var(--primary);  
 }
 .investor h2{
- font-size: 55px; 
+font-size: clamp(28px, 6vw, 55px);
+  font-weight: 600;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
 }
 .investor p{
- font-size: 15px;
- margin-top: 5px;
- 
+font-size: clamp(13px, 2vw, 15px);
+  margin-top: clamp(0.5rem, 1vw, 0.75rem);
 }
 .join{
   background-color: var(--primary);
@@ -86,24 +106,24 @@ footer {
 .pricing{
   justify-content: center;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: clamp(1rem, 3vw, 20px);
+    margin-bottom: clamp(1rem, 3vw, 20px);
 }
 .journey{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: clamp(1rem, 3vw, 20px);
 }
 .box1, .box2{
     border: 2px solid white;
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: clamp(1rem, 2vw, 20px);
+      padding: clamp(1rem, 3vw, 20px);
 }
 .pro{
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: clamp(10px, 1.5vw, 14px);
   align-items: center;
 }
 .commend{
@@ -114,58 +134,57 @@ footer {
 }
 .plans{
   display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: clamp(1rem, 2vw, 15px);
+    margin-bottom: clamp(1rem, 2vw, 15px);
   align-items: center;
-  gap: 10px;
-  font-size: 40px;
+  gap: clamp(0.5rem, 1.5vw, 10px);
+    font-size: clamp(28px, 6vw, 40px);
 
 }
 .dollar{
-font-size: 40px;
+font-size: clamp(28px, 6vw, 40px);
 }
 .plans .time{
-   font-size: 10px;
+  font-size: clamp(10px, 1.5vw, 14px);
 }
 .feature{
   text-align: center;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: clamp(0.5rem, 1.5vw, 10px);
+    margin-top: clamp(0.5rem, 1.5vw, 10px);
 }
 .box1 ul li{
   list-style: none;
   margin-top: 5px; 
 }
 .started{
-  margin-top: 15px;
-  margin-bottom: 10px;
-  margin-bottom: 5px;
+  margin-top: clamp(0.75rem, 2vw, 15px);
+    margin-bottom: clamp(0.5rem, 1vw, 10px);
   text-align: center;
   background-color: var(--primary);
   border: none;
-  border-radius: 20px;
+  border-radius: clamp(1rem, 2vw, 20px);
   justify-content: center;
-  padding: 5px;
-  width: 300px;
+  padding: clamp(0.5rem, 1vw, 5px);
+    width: clamp(200px, 80vw, 300px);
 }
 .secure{
   background: var(--card);
-  padding: 20px;
-  max-width: 400px;
-  border-radius: 20px;
+  padding: clamp(1rem, 3vw, 20px);
+    max-width: clamp(250px, 90vw, 400px);
+    border-radius: clamp(1rem, 2vw, 20px);
   border: 1px solid var(--border);
 }
 .secured{
   background: var(--card);
-  padding: 20px;
-  max-width: 600px;
-  border-radius: 20px;
+  padding: clamp(1rem, 3vw, 20px);
+    max-width: clamp(250px, 90vw, 600px);
+    border-radius: clamp(1rem, 2vw, 20px);
   border: 1px solid var(--border);
 }
 .secured h2{
-  font-size: 20px;
-  margin-top: 30px;
-  line-height: 30px;
+  font-size: clamp(16px, 4vw, 20px);
+    margin-top: clamp(1.5rem, 3vw, 30px);
+    line-height: clamp(1.5rem, 3vw, 30px);
 }
 .secured p{
   margin-top: 10px;
@@ -254,15 +273,15 @@ font-size: 40px;
    line-height: 50px;
 }
 .news-text h2{
-  font-size: 30px;
+  font-size: clamp(20px, 5vw, 30px);
 }
 .read-more{
-  padding: 5px 15px;
-  border-radius: 20px;
+  padding: clamp(0.5rem, 1vw, 5px) clamp(0.75rem, 2vw, 15px);
+    border-radius: clamp(1rem, 2vw, 20px);
   border: none;
-  margin-top: 50px;
+  margin-top: clamp(2rem, 5vw, 50px);
   font-weight: bold;
-  font-size: 15px;
+  font-size: clamp(13px, 2vw, 15px);
 } 
 .read-more:hover{
   background-color: var(--primary);

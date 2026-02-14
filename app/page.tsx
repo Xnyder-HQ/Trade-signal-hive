@@ -13,15 +13,26 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-primary selection:text-black">
       <Navbar />
-      <Hero />
+      <section id="home">
+        <Hero />
+      </section>
       <RealTime />
-      <Smarter />
+      <section id="company">
+        <Smarter />
+      </section>
       <Features />
-      <Tools />
+      <section id="copy-trading">
+        <Tools />
+      </section>
       <Plan />
       <Investor />
-      <EasyHelp />
-      <Footer />
+      <section id="faq">
+        <EasyHelp />
+      </section>
+      <section id="contact">
+        <Footer />
+      </section>
+      <section id="download" className="h-1" />
     </main>
   );
 }

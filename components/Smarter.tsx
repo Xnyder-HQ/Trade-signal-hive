@@ -1,51 +1,23 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import {spaceGrotesk,inter} from "../lib/fonts"
 
 export default function Dashboard() {
-    const testimonials = [
-    {
-      name: "Kathryn Murphy",
-      role: "Owner of Fidelity Investments",
-      text:
-        "From real-time stock updates to intuitive charts, this app gives me everything I need to confidently monitor and grow my investments every day.",
-      stars: 4,
-      image: "/avatar1.jpg",
-      highlight: false,
-    },
-    {
-      name: "Brooklyn Simmons",
-      role: "Owner of Robinhood",
-      text:
-        "This app completely transformed my trading experience! Real-time market updates, intelligent insights, and easy-to-use tools make investing simple, fast, and enjoyable every single day.",
-      stars: 5,
-      image: "/avatar2.jpg",
-      highlight: true,
-    },
-    {
-      name: "Cameron Williamson",
-      role: "Owner of Plantio",
-      text:
-        "This app completely transformed my trading experience! With real-time market updates, actionable insights, and intuitive tools, investing has never been easier or more confident.",
-      stars: 4,
-      image: "/avatar3.jpg",
-      highlight: false,
-    },
-  ];
   return (
     <div className="min-h-screen bg-[#050b0f] p-6 text-white">
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {/* Left big card */}
         <div className="rounded-3xl bg-linear-to-br from-cyan-600/30 to-black p-6 shadow-xl">
           <div className="mb-6 flex items-center justify-between">
-            <h1 className="text-3xl font-semibold">
+            <h1 className={`text-3xl font-semibold ${spaceGrotesk.className}`}>
               Top Stocks Driving<br />Smarter Trading Insights
             </h1>
             <button className="rounded-full bg-white/10 p-3">
               <ArrowUpRight />
             </button>
           </div>
-          <p className="mb-6 text-white/70">
+          <p className={`mb-6 text-white/70 ${inter.className}`}>
             Track top stocks like Apple, Tesla, Amazon and NVIDIA for smarter
             investing decisions
           </p>
@@ -85,14 +57,14 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 gap-6">
           <div className="rounded-3xl bg-linear-to-br from-cyan-500/30 to-black p-6 shadow-xl">
             <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-2xl font-semibold">
+              <h2 className={`text-2xl font-semibold ${spaceGrotesk.className}`}>
                 Get intelligent trading<br />suggestions with AI insights
               </h2>
               <button className="rounded-full bg-white/10 p-3">
                 <ArrowUpRight />
               </button>
             </div>
-            <p className="mb-4 text-white/70">
+            <p className={`mb-4 text-white/70 ${inter.className}`}>
               Get AI-powered trading suggestions to make smarter, faster and
               confident investment decisions daily
             </p>
@@ -103,14 +75,14 @@ export default function Dashboard() {
 
           <div className="rounded-3xl bg-linear-to-br from-cyan-600/30 to-black p-6 shadow-xl">
             <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-2xl font-semibold">
+              <h2 className={`text-2xl font-semibold ${spaceGrotesk.className}`}>
                 Track Leading<br />Stocks and Market Indices
               </h2>
               <button className="rounded-full bg-white/10 p-3">
                 <ArrowUpRight />
               </button>
             </div>
-            <p className="mb-6 text-white/70">
+            <p className={`mb-6 text-white/70 ${inter.className}`}>
               Monitor Dow Jones, NASDAQ and top stocks like Apple in real-time
               to make smarter trading decisions
             </p>

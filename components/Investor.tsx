@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -47,13 +48,13 @@ export default function Investor(){
   ];
     return(
         <div>
-            <h2 className="{spaceGrotesk.className} text-xs font-bold text-primary ml-50 mt-40">TRUSTED BY INVESTORS</h2>
+            <h2 className="text-xs font-bold text-primary ml-50 mt-40">TRUSTED BY INVESTORS</h2>
         <div className="flex justify-between items-center mt-10">
             <div className="ml-50 font-bold">
-                <h2 className="text-4xl">Here What our<br />Users Are Saying Today.</h2>
+                <h2 className={`text-4xl ${spaceGrotesk.className}`}>Here What our<br />Users Are Saying Today.</h2>
             </div>
             <div className="mr-50">
-                <p>Here directly from our users how app simplifies<br />
+                <p className={` ${inter.className}`}>Here directly from our users how app simplifies<br />
                    investing, provide real-time insights, and boosts<br />
                    confidence daily 
                 </p>
@@ -107,9 +108,11 @@ export default function Investor(){
 
                 <div className="flex items-center gap-4">
                   <div className="h-12 w-12 overflow-hidden rounded-full bg-gray-800">
-                    <img
-                      src={`https://i.pravatar.cc/150?u=${item.name}`}
+                    <Image
+                      src={item.image}
                       alt={item.name}
+                      width={48}
+                      height={48}
                       className="h-full w-full object-cover"
                     />
                   </div>

@@ -1,4 +1,4 @@
-import { TrendingUp, BarChart3, PieChart, ArrowRight } from "lucide-react";
+import { TrendingUp, BarChart3, PieChart,} from "lucide-react";
 import Link from "next/link";
 import { spaceGrotesk,inter } from "../lib/fonts";
 
@@ -11,10 +11,10 @@ export default function RealTime() {
           <TrendingUp className="h-4 w-4 text-primary" />
           <span className="text-xs font-bold text-primary tracking-wide">REAL-TIME INSIGHTS</span>
         </div>
-        <h2 className="{spaceGrotesk.className} text-3xl md:text-5xl font-bold text-white text-center max-w-2xl leading-tight ">
+        <h2 className={`text-3xl md:text-5xl font-bold text-white text-center max-w-2xl leading-tight ${spaceGrotesk.className}`}>
           Explore the Essential Core Features For Smarter Trading
         </h2>
-        <p className="{inter.className} text-muted-foreground max-w-xl text-center text-lg">
+        <p className={`text-muted-foreground max-w-xl text-center text-lg ${inter.className}`}>
           Unlock smarter investing with essential features that provide real-time insights, simplify trading decisions, and help you grow confidently.
         </p>
       </div>
@@ -30,10 +30,10 @@ export default function RealTime() {
                 <BarChart3 className="h-5 w-5" />
                 <span className="text-xs font-bold uppercase tracking-wider">Market Insights</span>
               </div>
-              <h3 className="mb-4 text-3xl font-bold text-white leading-tight">
+              <h3 className={`mb-4 text-3xl font-bold text-white leading-tight ${spaceGrotesk.className}`}>
                 Real-Time Stock Market Data Insights
               </h3>
-              <p className="text-zinc-400 leading-relaxed max-w-sm">
+              <p className={`text-zinc-400 leading-relaxed max-w-sm ${inter.className}`}>
                 Get real-time stock market data insights to track trends, make smarter investment decisions, and stay informed for better financial growth.
               </p>
             </div>
@@ -59,10 +59,10 @@ export default function RealTime() {
                 <PieChart className="h-5 w-5" />
                 <span className="text-xs font-bold uppercase tracking-wider">Realtime Insights</span>
               </div>
-              <h3 className="mb-4 text-3xl font-bold text-white leading-tight">
+              <h3 className={`mb-4 text-3xl font-bold text-white leading-tight ${spaceGrotesk.className}`}>
                 Efficiently Track and Grow Your Portfolio
               </h3>
-              <p className="text-zinc-400 leading-relaxed max-w-sm">
+              <p className={`text-zinc-400 leading-relaxed max-w-sm ${inter.className}`}>
                 Manage your investments effortlessly, track performance in real-time, and make informed decisions to grow your portfolio successfully.
               </p>
             </div>
@@ -84,7 +84,7 @@ export default function RealTime() {
         <div className="col-span-1 md:col-span-2 relative overflow-hidden rounded-4xl border border-white/10 bg-linear-to-r from-blue-950/50 to-black p-12 hover:border-primary/50 transition-colors duration-500">
           <div className="relative z-10 flex flex-col items-center justify-between gap-8 md:flex-row">
             <div className="flex-1">
-              <h2 className="text-3xl font-bold text-white md:text-4xl leading-tight">
+              <h2 className={`text-3xl font-bold text-white md:text-4xl leading-tight ${spaceGrotesk.className}`}>
                 Unlock Your Investment Potential <br />
                 <span className="text-white">— Join Hive Now!</span>
               </h2>

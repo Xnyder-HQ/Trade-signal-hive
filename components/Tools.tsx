@@ -8,13 +8,13 @@ export default function Tools() {
                 <h2 className="text-xs font-bold text-primary ml-2">SMART TOOLS</h2>
             </div>
             <div className="mt-3 advanced text-center ">
-                <h2 className="text-4xl mb-4 font-bold {spaceGrotesk.className}">Explore Advanced <br /> Tools for Smarter Investing Trading Today</h2>
-                <p className="text-sm  text-gray-500 max-w-lg mx-auto text-center {inter.className}">Use advanced trading tools to analyze markets, manage porfolios efficiently, and <br /> make smarter, confidence investment decision</p>  
+                <h2 className={`text-4xl mb-4 font-bold ${spaceGrotesk.className}`}>Explore Advanced <br /> Tools for Smarter Investing Trading Today</h2>
+                <p className={`text-sm  text-gray-500 max-w-lg mx-auto text-center ${inter.className}`}>Use advanced trading tools to analyze markets, manage porfolios efficiently, and <br /> make smarter, confidence investment decision</p>  
             </div>
             <div className="flex justify-center gap-5 ">
                 <div className="secured">
-                    <h2 className="text-2xl font-bold pt-30">Secure Bank Transfers <br />and Fast Withdrawals Details</h2>
-                    <p className="text-sm mt-3 text-gray-500">Track top stocks like Apple Tesla Amazon and NVIDIA for <br />smarter investing decisions</p>
+                <h2 className={`text-2xl font-bold pt-30 ${spaceGrotesk.className}`}>Secure Bank Transfers <br />and Fast Withdrawals Details</h2>
+                    <p className={`text-sm mt-3 text-gray-500 ${inter.className}`}>Track top stocks like Apple Tesla Amazon and NVIDIA for <br />smarter investing decisions</p>
                     <Link href="/dashboard"><button className="explore">Explore Now</button></Link>    
                 </div>
                 <div className="">
