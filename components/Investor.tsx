@@ -109,7 +109,7 @@ export default function Investor(){
                 <div className="flex items-center gap-4">
                   <div className="h-12 w-12 overflow-hidden rounded-full bg-gray-800">
                     <Image
-                      src={item.image}
+                      src={`https://i.pravatar.cc/150?u=${item.name}`}
                       alt={item.name}
                       width={48}
                       height={48}
